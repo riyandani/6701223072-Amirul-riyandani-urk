@@ -8,21 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const number2 = parseFloat(document.getElementById("number2").value);
         let result;
 
-        switch(operator) {
-            case "+":
-                result = number1 + number2;
-                break;
-            case "-":
-                result = number1 - number2;
-                break;
-            case "*":
-                result = number1 * number2;
-                break;
-            case "/":
-                result = number1 / number2;
-                break;
-            default:
-                result = "Invalid operator";
+        if (operator === "+") {
+            result = number1 + number2;
+        } else if (operator === "-") {
+            result = number1 - number2;
+        } else if (operator === "*") {
+            result = number1 * number2;
+        } else if (operator === "/") {
+            result = number1 / number2;
+        } else {
+            result = "Invalid operator";
         }
 
         alert("The result is: " + result);
